@@ -5,6 +5,14 @@
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
+// UENUM()
+// enum class ECamp :uint8
+// {
+// 	A,
+// 	B
+// };
+
+
 class UAimComponent;
 /**
  * 
@@ -28,7 +36,24 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Tank")
 	bool bAIOpenTick = true;
 
+
+	// TODO make it flexible, every AI keep different value
 	UPROPERTY(EditAnywhere, Category = "Tank")
 	float AcceptanceRadius = 30.f;
+
+	// It's called when the Pawn gets possessed.
+	virtual void SetPawn(APawn* InPawn) override;
+
+	UFUNCTION()
+	void OnPossedTankDeath();
+
+
+	// TODO divide camp
+	//UPROPERTY(EditAnywhere, Category = "Tank")
+	//ECamp Camp = ECamp::A;
+
+	// TODO make it work, so that AI can attack AI
+	//UFUNCTION(BlueprintCallable,Category = "Tank")
+	//APawn* FindEnemyTank(ECamp EnemyCamp);
 
 };
