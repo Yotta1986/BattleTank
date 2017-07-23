@@ -35,23 +35,71 @@ Now, in this version, player can drive a tank which looks powerful but actually 
 
 ![Mortar_BP](/BattleTank/Pictures/Mortar_BP.png)
 
-
-
 ## To Do list
 
 * Divide camp, with different UI, with camp damage
+
 * Flexible and changeable AI setting 
-* Better UI
+
+* ~~Better UI~~
+
+* ~~New Peojectile Static Mesh~~
+
 * More kinds of Attacking ways
+
 * More kinds of AI Pawn
 
+  ​
 
 
-## Some Screenshots
+
+
+## Doing
+
+* Dividing Camp.
+
+  * ~~CampComponent.h~~
+  * ~~FindEnemyTank()~~
+
+
+  * Camp damage
+
+* ~~Better UI~~
+
+  * ~~Different camp health bar~~ 
+  * ~~Player UI~~
+
+* A better way to spawn AI Tank and AI Controller.
+
+  * ~~Spawn in blueprint~~
+  * Move logic to Cpp
+
+* And garbage collection, to collect dead Controller and Tank
+
+  * Implement in Blueprint
+  * Move logic to Cpp
+
+* More kinds of AI Pawn
+
+  * ~~new tank~~ 
+
+
+  * ~~mortar~~
+  * new type
+
+
+
+
+
+
+
+
+## Screenshots
 
 ![](/BattleTank/Pictures/Game.png)
 
-![](/BattleTank/Pictures/Game2.png)
+![](/BattleTank/Pictures/Game5.png)
 
-![](/BattleTank/Pictures/Game3.png)
+![](/BattleTank/Pictures/Game6.png)
 
+![](/BattleTank/Pictures/Game7.png)

@@ -5,8 +5,8 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h" // Keep this line at last include
 
-
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTankDelegate);
+ 
+ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTankDelegate);
 
 UCLASS()
 class BATTLETANK_API ATank : public APawn
@@ -30,15 +30,15 @@ public:
 	int32 CurrentHealth; // Initialized in BeignPlay
 
 	UFUNCTION(BlueprintPure, Category = "Tank")
+	int32 GetStartHealth() const { return StartHealth; }
+	UFUNCTION(BlueprintPure, Category = "Tank")
+	int32 GetCurrentHealth()  const { return CurrentHealth; }
+
+	UFUNCTION(BlueprintPure, Category = "Tank")
 	float GetHealthPercent() const;
 
 
 
 	FTankDelegate OnDeath;
-
-
-
-
-
 
 };

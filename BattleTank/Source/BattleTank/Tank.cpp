@@ -2,7 +2,7 @@
 
 #include "BattleTank.h"
 #include "Tank.h"
-#include "AimComponent.h"
+
 
 
 // Sets default values
@@ -22,6 +22,7 @@ void ATank::BeginPlay()
 
 float ATank::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
+
 	int32 DamageToApply = FPlatformMath::RoundToInt(FMath::Clamp<float>(Damage, 0.f, CurrentHealth));
 
 	CurrentHealth -= DamageToApply;
