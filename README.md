@@ -13,7 +13,7 @@ Now, in this version, player can drive a tank which looks powerful but actually 
 ## Development
 
 * Version: [Unreal Engine 4]([https://www.unrealengine.com/](http://www.baidu.com/link?url=aaoWkzwdoF7Gr-RfER1k3bDxNWeCMEV7nWS9vRP76yVv-9piIoD0aR12udmVxYrF)).15
-* Machine: i5 4460 + GTX970, i5 6600 + RX480
+* Platform: i5 4460 + GTX970, i5 6600 + RX480
 
 
 * Developing rules:
@@ -23,7 +23,16 @@ Now, in this version, player can drive a tank which looks powerful but actually 
   * Cpp handles most of game logic
 
 
+
+
+## Class
+
 * Main Cpp classes relations:
+  * Cpp class AIController and PlayerController are both inherited from Controller. They handle their input respectively.
+  * Cpp class AimComponent and MovementComponent are both inherited from ActorComponent. AimComponent handles aiming and firing, MovementComponent handles movement.
+  * AimComponent has three members (pointers), Turret, Barrel and Projectile. 
+  * Turret and Barrel  is unique for one Tank. They provide aiming action. 
+  * Projectile TODO
 
 ![ClassRelations](/BattleTank/Pictures/ClassRelations.png)
 
@@ -38,40 +47,23 @@ Now, in this version, player can drive a tank which looks powerful but actually 
 ## To Do list
 
 * Divide camp, with different UI, with camp damage
-
-* Flexible and changeable AI setting 
-
-* ~~Better UI~~
-
-* ~~New Peojectile Static Mesh~~
-
+* Flexible and changeable AI setting(projectile damage, reload time) , Flexible way for AI to choose an enemy
+* Better UI
 * More kinds of Attacking ways
-
-* More kinds of AI Pawn
-
-  ​
+* More kinds of AI Pawn (new combination of components)
+* New attack way (fire component maybe? )
 
 
 
 
 ## Doing
 
-* Dividing Camp.
-
-  * ~~CampComponent.h~~
-  * ~~FindEnemyTank()~~
-
-
   * Camp damage
-
-* ~~Better UI~~
-
-  * ~~Different camp health bar~~ 
-  * ~~Player UI~~
 
 * A better way to spawn AI Tank and AI Controller.
 
   * ~~Spawn in blueprint~~
+  * ~~Make an Actor, a Spawner~~
   * Move logic to Cpp
 
 * And garbage collection, to collect dead Controller and Tank
@@ -79,13 +71,6 @@ Now, in this version, player can drive a tank which looks powerful but actually 
   * Implement in Blueprint
   * Move logic to Cpp
 
-* More kinds of AI Pawn
-
-  * ~~new tank~~ 
-
-
-  * ~~mortar~~
-  * new type
 
 
 
